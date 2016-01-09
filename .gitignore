@@ -1,3 +1,5 @@
+#following gitignore is a merge of java, eclipse and maven gitignore
+
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -51,3 +53,13 @@ local.properties
 
 # STS (Spring Tool Suite)
 .springBeans
+target/
+
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
