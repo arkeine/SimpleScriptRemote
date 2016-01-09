@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root orientation="HORIZONTAL">
+	<line-led>
+		<led1 protocol="SSH" component="SIMPLE_LED" border-text="example ls" 
+		color-result-ok="#00FF00" color-result-error="#FF0000" delay="10000">ls -a</led1>
+		<led2 protocol="SSH" component="SIMPLE_LED" border-text="example ps" 
+		color-result-ok="#00FF00" color-result-error="#FF0000" delay="10000">ps x</led2>
+	</line-led>
+	<line-button>
+		<button1 protocol="SSH" component="SIMPLE_BUTTON" border-text="example ls" 
+		color-result-ok="#00FF00" color-result-error="#FF0000" button-text="LS">ls -a</button1>
+		<button2 protocol="SSH" component="SIMPLE_BUTTON" border-text="example ps" 
+		color-result-ok="#00FF00" color-result-error="#FF0000" button-text="PS">ps x</button2>
+	</line-button>
+</root>
