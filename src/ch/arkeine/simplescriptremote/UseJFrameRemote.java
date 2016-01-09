@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import ch.arkeine.simplescriptremote.generic_gui.JFrameRemote;
 import ch.arkeine.simplescriptremote.tool.SharredConstants;
@@ -15,7 +16,7 @@ public class UseJFrameRemote {
 	/* ============================================ */
 	// PUBLIC
 	/* ============================================ */
-	
+
 	public static void main(String[] args) {
 		main();
 	}
@@ -23,10 +24,10 @@ public class UseJFrameRemote {
 	public static void main() {
 		configureLogger();
 		configureLAF();
-		
+
 		new JFrameRemote();
 	}
-	
+
 	/* ============================================ */
 	// PRIVATE
 	/* ============================================ */
@@ -46,8 +47,10 @@ public class UseJFrameRemote {
 	private static void configureLAF() {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (Exception e) {
-			System.out.println("Error setting native LAF: " + e);
+		} catch (ReflectiveOperationException | UnsupportedLookAndFeelException e) {
+			Logger l = Logger.getLogger(SharredConstants.LOGGER_NAME);
+			l.info(e.getMessage());
 		}
+
 	}
 }
