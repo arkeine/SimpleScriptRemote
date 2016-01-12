@@ -35,6 +35,8 @@ public class JFrameRemote extends JFrame
 			l.warning(e.getMessage());
 
 			JOptionPane.showMessageDialog(this, "Can not load interface description");
+			//TODO create a custom exception
+			System.exit(-1);
 			}
 		}
 
